@@ -1,0 +1,178 @@
+/* Utopia fluid responsive design for types, spacing, and grids */
+:root {
+  /* Type @link https://utopia.fyi/type/calculator?c=320,12,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --step--2: clamp(0.521rem, 0.507rem + 0.068vi, 0.56rem);
+  --step--1: clamp(0.625rem, 0.599rem + 0.13vi, 0.7rem);
+  --step-0: clamp(0.75rem, 0.707rem + 0.217vi, 0.875rem);
+  --step-1: clamp(0.9rem, 0.833rem + 0.337vi, 1.094rem);
+  --step-2: clamp(1.08rem, 0.98rem + 0.499vi, 1.367rem);
+  --step-3: clamp(1.296rem, 1.152rem + 0.718vi, 1.709rem);
+  --step-4: clamp(1.555rem, 1.353rem + 1.01vi, 2.136rem);
+  --step-5: clamp(1.866rem, 1.587rem + 1.398vi, 2.67rem);
+
+  /* Space @link https://utopia.fyi/space/calculator?c=320,12,1.2,1240,14,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --space-3xs: clamp(0.188rem, 0.166rem + 0.109vi, 0.25rem);
+  --space-2xs: clamp(0.375rem, 0.353rem + 0.109vi, 0.438rem);
+  --space-xs: clamp(0.563rem, 0.519rem + 0.217vi, 0.688rem);
+  --space-s: clamp(0.75rem, 0.707rem + 0.217vi, 0.875rem);
+  --space-m: clamp(1.125rem, 1.06rem + 0.326vi, 1.313rem);
+  --space-l: clamp(1.5rem, 1.413rem + 0.435vi, 1.75rem);
+  --space-xl: clamp(2.25rem, 2.12rem + 0.652vi, 2.625rem);
+  --space-2xl: clamp(3rem, 2.826rem + 0.87vi, 3.5rem);
+  --space-3xl: clamp(4.5rem, 4.239rem + 1.304vi, 5.25rem);
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(0.188rem, 0.101rem + 0.435vi, 0.438rem);
+  --space-2xs-xs: clamp(0.375rem, 0.266rem + 0.543vi, 0.688rem);
+  --space-xs-s: clamp(0.563rem, 0.454rem + 0.543vi, 0.875rem);
+  --space-s-m: clamp(0.75rem, 0.554rem + 0.978vi, 1.313rem);
+  --space-m-l: clamp(1.125rem, 0.908rem + 1.087vi, 1.75rem);
+  --space-l-xl: clamp(1.5rem, 1.109rem + 1.957vi, 2.625rem);
+  --space-xl-2xl: clamp(2.25rem, 1.815rem + 2.174vi, 3.5rem);
+  --space-2xl-3xl: clamp(3rem, 2.217rem + 3.913vi, 5.25rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(0.75rem, 0.402rem + 1.739vi, 1.75rem);
+
+  /* Grid @link https://utopia.fyi/grid/calculator?c=320,12,1.2,1240,14,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --grid-max-width: 54.25rem;
+  --grid-gutter: var(--space-s-l, clamp(0.75rem, 0.1661rem + 2.9197vw, 1.75rem));
+  --grid-columns: 12;
+}
+:root {
+  --c-primary: 0, 145, 110;
+  --c-secondary: 238, 244, 212;
+  --c-tertiary: 255, 107, 107;
+  --c-white-0: 255, 255, 255;
+  --c-white-1: 248, 248, 248;
+  --c-white-2: 242, 242, 242;
+  --c-white-3: 235, 235, 235;
+  --c-black--1: 0, 0, 0;
+  --c-black-0: 38, 38, 38;
+  --c-black-1: 40, 40, 40;
+  --c-black-2: 46, 46, 46;
+  --c-black-3: 60, 60, 60;
+  --c-black-4: 84, 84, 84;
+  --c-indigo: 44, 62, 80;
+
+  --c-divider-light-1: rgba(var(--c-black-3), 0.29);
+  --c-divider-light-2: rgba(var(--c-black-3), 0.12);
+  --c-divider-dark-1: rgba(var(--c-black-4), 0.65);
+  --c-divider-dark-2: rgba(var(--c-black-4), 0.48);
+
+  --c-text-light-1: rgba(var(--c-indigo), 1);
+  --c-text-light-2: rgba(var(--c-black-3), 0.66);
+  --c-text-dark-1: rgba(var(--c-white-0), 1);
+  --c-text-dark-2: rgba(var(--c-white-3), 0.64);
+
+  --font-family: 
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background-rgb: var(--c-white-0);
+  --color-background: rgba(var(--c-white-0), 1);
+  --color-background-header-rgb: var(--c-white-0);
+  --color-background-header: rgba(var(--c-white-0), 1);
+  --color-background-mute-rgb: var(--c-white-2);
+  --color-background-mute: rgba(var(--c-white-2), 1);
+  --color-background-soft-rgb: var(--c-white-1);
+  --color-background-soft: rgba(var(--c-white-1), 1);
+
+  --color-border: var(--c-divider-light-2);
+  --color-border-hover: var(--c-divider-light-1);
+
+  --color-button-background-rgb: var(--c-black--1);
+
+  --color-heading: var(--c-text-light-1);
+  --color-text: var(--c-text-light-1);
+
+  --section-gap: 160px;
+}
+.dark-mode {
+  --color-background-rgb: var(--c-black-0);
+  --color-background: rgba(var(--c-black-0), 1);
+  --color-background-header-rgb: var(--c-black--1);
+  --color-background-header: rgba(var(--c-black--1), 1);
+  --color-background-mute-rgb: var(--c-black-2);
+  --color-background-mute: rgba(var(--c-black-2), 1);
+  --color-background-soft-rgb: var(--c-black-1);
+  --color-background-soft: rgba(var(--c-black-1), 1);
+
+  --color-border: var(--c-divider-dark-2);
+  --color-border-hover: var(--c-divider-dark-1);
+
+  --color-button-background-rgb: var(--c-white-0);
+
+  --color-heading: var(--c-text-dark-1);
+  --color-text: var(--c-text-dark-2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Chrome scrollbar styling */
+::-webkit-scrollbar {
+  display: initial;
+  width: 10px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background: #959595;
+  background-clip: padding-box;
+  border: 4px solid transparent;
+  border-radius: 8px;
+  box-shadow: none;
+  min-height: 50px;
+}
+::-webkit-scrollbar-track {
+  background: none;
+  border: none;
+}

@@ -1,0 +1,72 @@
+@import './base.css';
+
+#app {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  font-weight: normal;
+}
+.layout-container {
+  padding: 0 var(--space-s-l);
+}
+main {
+  position: relative;
+  height: calc(100vh - 50px);
+  overflow: hidden auto;
+  z-index: 0;
+}
+.create-board-container {
+  position: relative;
+}
+h1 {
+  font-size: var(--step-3);
+  font-weight: 600;
+}
+button {
+  outline: none;
+  border: none;
+  padding: var(--space-2xs) var(--space-xs);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.c-primary {
+  color: rgba(var(--c-primary), 1);
+}
+.bg-primary {
+  background-color: rgba(var(--c-primary), 1);
+  color: rgba(var(--c-white-0), 1);
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: 0.4s;
+}
+.green {
+  text-decoration: none;
+  color: rgba(var(--c-primary), 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+/* Animation - fade */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Animation - slide right */
+.slide-right-enter-active {
+  transition: transform 400ms ease-out !important;
+}
+.slide-right-leave-active  {
+  transition: transform 400ms ease-in !important;
+}
+.slide-right-enter-from,
+.slide-right-leave-to {
+  transform: translateX(100%);
+}
